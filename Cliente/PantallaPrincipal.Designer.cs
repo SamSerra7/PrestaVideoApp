@@ -85,6 +85,7 @@
             btn_pelicula.TabIndex = 3;
             btn_pelicula.Text = "Película";
             btn_pelicula.UseVisualStyleBackColor = false;
+            btn_pelicula.Click += btn_pelicula_Click;
             // 
             // btn_encargado
             // 

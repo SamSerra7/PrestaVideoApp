@@ -25,10 +25,6 @@ namespace Negocios
         // Logica de negocio para obtener s peliculas
         public List<Pelicula> ObtenerPeliculas()
         {
-            if (peliculaDatos.ObtenerPeliculas().Count == 0)
-            {
-                throw new Exception("No hay datos para mostrar");
-            }
             return peliculaDatos.ObtenerPeliculas();
         }
     }

@@ -13,5 +13,12 @@ namespace Cliente
             categoriaPeliculaView.Show();
             this.Hide();
         }
+
+        private void btn_pelicula_Click(object sender, EventArgs e)
+        {
+            PeliculaView peliculaView = new PeliculaView();
+            peliculaView.Show();
+            this.Hide();
+        }
     }
 }
