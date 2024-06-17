@@ -1,6 +1,6 @@
 ﻿using Negocios;
 
-namespace Cliente
+namespace ClienteViews
 {
     partial class CategoriaPeliculaView
     {

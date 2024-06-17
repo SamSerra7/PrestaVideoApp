@@ -1,4 +1,4 @@
-﻿namespace Cliente
+﻿namespace ClienteViews
 {
     partial class PantallaPrincipal
     {
@@ -98,6 +98,7 @@
             btn_encargado.TabIndex = 4;
             btn_encargado.Text = "Encargado";
             btn_encargado.UseVisualStyleBackColor = false;
+            btn_encargado.Click += btn_encargado_Click;
             // 
             // btn_sucursal
             // 
@@ -110,6 +111,7 @@
             btn_sucursal.TabIndex = 5;
             btn_sucursal.Text = "Sucursal";
             btn_sucursal.UseVisualStyleBackColor = false;
+            btn_sucursal.Click += btn_sucursal_Click;
             // 
             // btn_cliente
             // 
@@ -122,6 +124,7 @@
             btn_cliente.TabIndex = 6;
             btn_cliente.Text = "Cliente";
             btn_cliente.UseVisualStyleBackColor = false;
+            btn_cliente.Click += btn_cliente_Click;
             // 
             // btn_pelicula_sucursal
             // 
@@ -134,6 +137,7 @@
             btn_pelicula_sucursal.TabIndex = 7;
             btn_pelicula_sucursal.Text = "Pelicula por Sucursal";
             btn_pelicula_sucursal.UseVisualStyleBackColor = false;
+            btn_pelicula_sucursal.Click += btn_pelicula_sucursal_Click;
             // 
             // PantallaPrincipal
             // 

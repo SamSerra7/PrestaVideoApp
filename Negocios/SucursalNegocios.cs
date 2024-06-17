@@ -15,7 +15,7 @@ namespace Negocios
         // Logica de negocio para registrar  sucursal
         public void RegistrarSucursal(Sucursal sucursal)
         {
-            if (sucursalDatos.ObtenerSucursales().Length == 5)
+            if (sucursalDatos.ObtenerSucursales().Count == 5)
             {
                 throw new Exception("Limite alcanzado, no se pueden agregar mas datos");
             }
@@ -23,12 +23,8 @@ namespace Negocios
         }
 
         // Logica de negocio para obtener las sucursales
-        public Sucursal[] ObtenerSucursales()
+        public List<Sucursal> ObtenerSucursales()
         {
-            if (sucursalDatos.ObtenerSucursales().Length == 0)
-            {
-                throw new Exception("No hay datos para mostrar");
-            }
             return sucursalDatos.ObtenerSucursales();
         }
     }

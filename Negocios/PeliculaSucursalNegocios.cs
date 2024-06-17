@@ -15,7 +15,7 @@ namespace Negocios
         // Logica de negocio para registrar  peliculaSucursal
         public void RegistrarPeliculaSucursal(PeliculaSucursal peliculaSucursal)
         {
-            if (peliculaSucursalDatos.ObtenerPeliculasSucursales().Length == 100)
+            if (peliculaSucursalDatos.ObtenerPeliculasSucursales().Count == 100)
             {
                 throw new Exception("Limite alcanzado, no se pueden agregar mas datos");
             }
@@ -23,12 +23,8 @@ namespace Negocios
         }
 
         // Logica de negocio para obtener la asociacion entre peliculas y sucursales
-        public PeliculaSucursal[] ObtenerPeliculaSucursales()
+        public List<PeliculaSucursal> ObtenerPeliculaSucursales()
         {
-            if (peliculaSucursalDatos.ObtenerPeliculasSucursales().Length == 0)
-            {
-                throw new Exception("No hay datos para mostrar");
-            }
             return peliculaSucursalDatos.ObtenerPeliculasSucursales();
         }
     }

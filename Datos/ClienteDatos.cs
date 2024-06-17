@@ -9,7 +9,7 @@ namespace Datos
 {
     public class ClienteDatos
     {
-        private static Cliente[] clientes = new Cliente[20];
+        private static List<Cliente> clientes = new List<Cliente>();
 
         //Metodo para registrar un nuevo cliente (agregarla en el arreglo establecido)
         public void RegistrarCliente(Cliente cliente)
@@ -18,11 +18,11 @@ namespace Datos
             {
                 if (c.IdCliente == cliente.IdCliente || c.Identificacion == cliente.Identificacion) throw new Exception("Ya existe un elemento con este id");
             }
-            clientes.Append(cliente);
+            clientes.Add(cliente);
         }
 
         //Metodo que retorna el arreglo(datos) de Clientes
-        public Cliente[] ObtenerClientes()
+        public List<Cliente> ObtenerClientes()
         {
             return clientes;
         }

@@ -9,7 +9,7 @@ namespace Datos
 {
     public class SucursalDatos
     {
-        private static Sucursal[] sucursales = new Sucursal[5];
+        private static List<Sucursal> sucursales = new List<Sucursal>();
 
         //Metodo para registrar una nueva sucursal (agregarla en el arreglo establecido)
         public void RegistrarSucursal(Sucursal sucursal)
@@ -18,11 +18,11 @@ namespace Datos
             {
                 if (cp.IdSucursal == sucursal.IdSucursal) throw new Exception("Ya existe un elemento con este id");
             }
-            sucursales.Append(sucursal);
+            sucursales.Add(sucursal);
         }
 
         //Metodo que retorna el arreglo(datos) de las sucursales
-        public Sucursal[] ObtenerSucursales()
+        public List<Sucursal> ObtenerSucursales()
         {
             return sucursales;
         }

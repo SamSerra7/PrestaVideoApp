@@ -8,44 +8,59 @@ namespace Entidades
 {
     public class Sucursal
     {
+
+        public Sucursal(string nombre, Encargado encargado, string dir, string tel, bool activo)
+        {
+            IdSucursal = Utils.generarRandomId();
+            Nombre = nombre;
+            Encargado = encargado;
+            Direccion = dir;
+            Tel = tel;
+            Activo = activo;
+        }
+
         public int IdSucursal { get; private set; }
+        private string nombre;
         public string Nombre
         {
-            get { return Nombre; }
+            get { return nombre; }
             set
             {
                 if (string.IsNullOrEmpty(value)) throw new Exception("El nombre no puede estar vacio");
-                Nombre = value;
+                nombre = value;
             }
         }
 
+        private Encargado encargado;
         public Encargado Encargado
         {
-            get { return Encargado; }
+            get { return encargado; }
             set
             {
                 if (value == null) throw new Exception("El Encargado no puede estar vacio");
-                Encargado = value;
+                encargado = value;
             }
         }
 
+        private string direccion;
         public string Direccion
         {
-            get { return Direccion; }
+            get { return direccion; }
             set
             {
                 if (string.IsNullOrEmpty(value)) throw new Exception("La Direccion no puede estar vacio");
-                Direccion = value;
+                direccion = value;
             }
         }
 
+        private string tel;
         public string Tel
         {
-            get { return Tel; }
+            get { return tel; }
             set
             {
                 if (string.IsNullOrEmpty(value)) throw new Exception("El Telefono no puede estar vacio");
-                Tel = value;
+                tel = value;
             }
         }
 

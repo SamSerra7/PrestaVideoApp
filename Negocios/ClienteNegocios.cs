@@ -15,20 +15,16 @@ namespace Negocios
         // Logica de negocio para registrar  cliente
         public void RegistrarCliente(Cliente cliente)
         {
-            if (clienteDatos.ObtenerClientes().Length == 20)
+            if (clienteDatos.ObtenerClientes().Count == 20)
             {
                 throw new Exception("Limite alcanzado, no se pueden agregar mas datos");
             }
             clienteDatos.RegistrarCliente(cliente);
         }
 
-        // Logica de negocio para obtener s clientes
-        public Cliente[] ObtenerClientes()
+        // Logica de negocio para obtener clientes
+        public List<Cliente> ObtenerClientes()
         {
-            if (clienteDatos.ObtenerClientes().Length == 0)
-            {
-                throw new Exception("No hay datos para mostrar");
-            }
             return clienteDatos.ObtenerClientes();
         }
     }

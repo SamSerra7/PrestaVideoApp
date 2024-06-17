@@ -1,4 +1,4 @@
-﻿namespace Cliente
+﻿namespace ClienteViews
 {
     partial class PeliculaView
     {
@@ -34,13 +34,11 @@
             cb_categoria = new ComboBox();
             lbl_error = new Label();
             txt_titulo = new TextBox();
-            num_lanzamiento = new NumericUpDown();
-            label1 = new Label();
             txt_dioma = new TextBox();
             button2 = new Button();
             dgv_peliculas = new DataGridView();
             peliculaNegociosBindingSource = new BindingSource(components);
-            ((System.ComponentModel.ISupportInitialize)num_lanzamiento).BeginInit();
+            txt_lanzamiento = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dgv_peliculas).BeginInit();
             ((System.ComponentModel.ISupportInitialize)peliculaNegociosBindingSource).BeginInit();
             SuspendLayout();
@@ -53,9 +51,9 @@
             label_titulo.Font = new Font("Segoe UI Semibold", 36F, FontStyle.Bold, GraphicsUnit.Point);
             label_titulo.Location = new Point(290, 9);
             label_titulo.Name = "label_titulo";
-            label_titulo.Size = new Size(197, 67);
+            label_titulo.Size = new Size(218, 67);
             label_titulo.TabIndex = 2;
-            label_titulo.Text = "Película";
+            label_titulo.Text = "Películas";
             label_titulo.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // button1
@@ -76,7 +74,6 @@
             cb_categoria.Name = "cb_categoria";
             cb_categoria.Size = new Size(121, 23);
             cb_categoria.TabIndex = 9;
-            cb_categoria.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // lbl_error
             // 
@@ -94,22 +91,6 @@
             txt_titulo.PlaceholderText = "Título";
             txt_titulo.Size = new Size(100, 23);
             txt_titulo.TabIndex = 11;
-            // 
-            // num_lanzamiento
-            // 
-            num_lanzamiento.Location = new Point(312, 131);
-            num_lanzamiento.Name = "num_lanzamiento";
-            num_lanzamiento.Size = new Size(120, 23);
-            num_lanzamiento.TabIndex = 12;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(309, 115);
-            label1.Name = "label1";
-            label1.Size = new Size(113, 15);
-            label1.TabIndex = 13;
-            label1.Text = "Año de lanzamiento";
             // 
             // txt_dioma
             // 
@@ -144,16 +125,23 @@
             // 
             peliculaNegociosBindingSource.DataSource = typeof(Negocios.PeliculaNegocios);
             // 
+            // txt_lanzamiento
+            // 
+            txt_lanzamiento.Location = new Point(306, 131);
+            txt_lanzamiento.Name = "txt_lanzamiento";
+            txt_lanzamiento.PlaceholderText = "Fecha de Lanzamiento";
+            txt_lanzamiento.Size = new Size(127, 23);
+            txt_lanzamiento.TabIndex = 17;
+            // 
             // PeliculaView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(txt_lanzamiento);
             Controls.Add(dgv_peliculas);
             Controls.Add(button2);
             Controls.Add(txt_dioma);
-            Controls.Add(label1);
-            Controls.Add(num_lanzamiento);
             Controls.Add(txt_titulo);
             Controls.Add(lbl_error);
             Controls.Add(cb_categoria);
@@ -161,7 +149,6 @@
             Controls.Add(label_titulo);
             Name = "PeliculaView";
             Text = "PeliculaView";
-            ((System.ComponentModel.ISupportInitialize)num_lanzamiento).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgv_peliculas).EndInit();
             ((System.ComponentModel.ISupportInitialize)peliculaNegociosBindingSource).EndInit();
             ResumeLayout(false);
@@ -175,11 +162,10 @@
         private ComboBox cb_categoria;
         private Label lbl_error;
         private TextBox txt_titulo;
-        private NumericUpDown num_lanzamiento;
-        private Label label1;
         private TextBox txt_dioma;
         private Button button2;
         private DataGridView dgv_peliculas;
         private BindingSource peliculaNegociosBindingSource;
+        private TextBox txt_lanzamiento;
     }
 }
