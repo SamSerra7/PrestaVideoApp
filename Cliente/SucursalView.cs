@@ -28,7 +28,10 @@ namespace ClienteViews
             encargados = encargadoNegocios.ObtenerEncargados();
             if (sucursales.Count > 0)
             {
-                dgv_sucursales.DataSource = sucursales;
+                var objPel = new List<Object>();
+                sucursales.ForEach(s => objPel.Add(new { id = s.IdSucursal, nombre = s.Nombre, encargado = s.Encargado.Nombre, direccion = s.Direccion, tel= s.Tel, activo=s.Activo }));
+
+                dgv_sucursales.DataSource = objPel;
                 lbl_error.Text = "";
             }
             else

@@ -31,7 +31,10 @@ namespace ClienteViews
 
             if (peliculasSucursales.Count > 0)
             {
-                dgv_pelicula_sucursal.DataSource = peliculasSucursales;
+                var objPel = new List<Object>();
+                peliculasSucursales.ForEach(p => objPel.Add(new { titulo= p.Pelicula.Titulo, sucursal= p.Sucursal, cantidad= p.Cantidad }));
+
+                dgv_pelicula_sucursal.DataSource = objPel;
                 lbl_error.Text = "";
             }
             else
@@ -54,7 +57,9 @@ namespace ClienteViews
             
             if (peliculas.Count > 0)
             {
+                
                 dgv_peliculas.DataSource = peliculas;
+
                 lbl_error.Text = "";
             }
             else
